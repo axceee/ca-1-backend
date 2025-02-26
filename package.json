@@ -1,0 +1,27 @@
+{
+  "name": "ca-1-backend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/axceee/ca-1-backend#readme",
+  "bugs": {
+    "url": "https://github.com/axceee/ca-1-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axceee/ca-1-backend.git"
+  },
+  "license": "ISC",
+  "author": "me",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.2",
+    "nodemon": "^3.1.9"
+  }
+}
