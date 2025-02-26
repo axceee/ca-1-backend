@@ -8,7 +8,7 @@ import express from 'express'
 const app = express()
 app.use(express.json())
 
-import router from './routes/user.routes'
+import router from './routes/user.routes.js'
 
 app.use('/user',router)
 

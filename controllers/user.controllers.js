@@ -1,21 +1,19 @@
-import User from "../models/user.models";
+import User from "../models/user.models.js";
 
 const createUser = async function (req,res) {
    try{
         const {username,email,password} = req.body
 
-        if(!username || username.trim() === ''){
-            res.send(400).json({msg:'Username can not be empty'})
-        }
-        if(!email || email.trim() === ''){
-            res.send(400).json({msg:'Username can not be empty'})
-        }
-        if(!password || password.trim() === ''){
-            res.send(400).json({msg:'Username can not be empty'})
-        } 
-        if(password.length() <= 8 || password.length() > 16 ){
-            res.send(400).json({msg:'Password length should be greater than 8 or less than or equal to 16'})
-        }
+        // if(!username || username.trim() === ''){
+        //     res.send(400).json({msg:'Username can not be empty'})
+        // }
+        // if(!email || email.trim() === ''){
+        //     res.send(400).json({msg:'Username can not be empty'})
+        // }
+        
+        // if(password.length() <= 8 || password.length() > 16 ){
+        //     res.send(400).json({msg:'Password length should be greater than 8 or less than or equal to 16'})
+        // }
 
 
 
@@ -26,6 +24,8 @@ const createUser = async function (req,res) {
         })
 
         await newUser.save()
+
+        res.send(200).json({msg:'user created',user:User})
 
    }
    catch(error){
