@@ -2,7 +2,7 @@ import User from "../models/user.models.js";
 
 const createUser = async function (req,res) {
    try{
-        const {username,email,password} = await req.body
+        const {username,email,password} =  req.body
 
         if(!username || username.trim() === ''){
             res.send(400).json({msg:'Username can not be empty'})
